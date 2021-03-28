@@ -20,11 +20,5 @@ docker-stop:
 lint:
 	./vendor/bin/sail composer phpcs
 
-test:
-	./vendor/bin/sail artisan test
-
-lint-fix:
-	./vendor/bin/sail composer phpcbf
-
 deploy:
 	git push heroku main
