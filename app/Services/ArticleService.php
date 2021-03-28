@@ -41,7 +41,7 @@ class ArticleService
     public function createComment(array $data)
     {
         $article = Article::find($data['article_id']);
-        if ($article == null) {
+        if (!$article) {
             return null;
         }
 
@@ -57,7 +57,7 @@ class ArticleService
     public function createLike(Request $request)
     {
         $article = Article::find($request->get('articleId'));
-        if ($article == null) {
+        if (!$article) {
             return null;
         }
 
@@ -73,7 +73,7 @@ class ArticleService
     public function createView(Request $request)
     {
         $article = Article::find($request->get('articleId'));
-        if ($article == null) {
+        if (!$article) {
             return null;
         }
 
