@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', ['articles' => \App\Models\Article::orderBy('id', 'DESC')->limit(6)->get()]);
-});
+Route::get('/', [ArticleController::class, 'welcome']);
 
 Route::resources([
-    'articles' => ArticleController::class,
-    'tags' => TagController::class
+    'articles' => ArticleController::class
 ]);
