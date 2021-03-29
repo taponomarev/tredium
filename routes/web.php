@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ArticleController::class, 'welcome']);
 
 Route::resources([
-    'articles' => ArticleController::class
+    'articles' => ArticleController::class,
+    'tags' => TagController::class
 ]);
