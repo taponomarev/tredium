@@ -14,6 +14,6 @@ class TagController extends Controller
      */
     public function show(Tag $tag): RedirectResponse
     {
-        return redirect('/');
+        return back();
     }
 }

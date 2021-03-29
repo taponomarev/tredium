@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-3">
             @forelse($article->tags as $tag)
-                <a class="btn btn-outline-primary mb-1" href="{{ route('tags.show', $tag->title) }}">{{ $tag->title }}</a>
+                <a class="btn btn-outline-primary mb-1" href="{{ route('tags.show', $tag) }}">{{ $tag->title }}</a>
             @empty
             @endforelse
         </div>
