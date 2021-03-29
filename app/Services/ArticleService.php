@@ -23,7 +23,7 @@ class ArticleService
      */
     public function getAll()
     {
-        return Article::sorted()->limit($this->limit);
+        return Article::sorted()->limit($this->limit)->get();
     }
 
     /**
